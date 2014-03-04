@@ -41,7 +41,7 @@ public class InternalFileCache extends FileCache {
 	}
 
 	@Override
-	public void put(String key, byte[] content) {
+	public void selfPut(String key, byte[] content) {
 		try {
 			FileOutputStream fos = context.openFileOutput(key, Context.MODE_PRIVATE);
 			fos.write(content);

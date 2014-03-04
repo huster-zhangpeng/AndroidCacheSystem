@@ -53,7 +53,7 @@ public class JSONCache extends KeyValueCache {
 	}
 
 	@Override
-	public void put(String key, Item value) {
+	public void selfPut(String key, Item value) {
 		try {
 			jsonObj.put(key, value.getOriginalValue());
 		} catch (JSONException e) {

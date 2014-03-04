@@ -50,7 +50,7 @@ public class ExternalFileCache extends FileCache {
 	}
 
 	@Override
-	public void put(String filename, byte[] content) {
+	public void selfPut(String filename, byte[] content) {
 		try {
 			OutputStream writer = new FileOutputStream(Location + filename);
 			writer.write(content);

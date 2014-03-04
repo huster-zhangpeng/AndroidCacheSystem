@@ -31,7 +31,7 @@ public class SDCardPreferedCache extends FileCache {
 	}
 
 	@Override
-	public void put(String key, byte[] value) {
+	public void selfPut(String key, byte[] value) {
 		fileCache.put(key, value);
 	}
 

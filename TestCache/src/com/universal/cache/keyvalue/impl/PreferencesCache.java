@@ -37,7 +37,7 @@ public class PreferencesCache extends KeyValueCache {
 	}
 	
 	
-	public void put(String key, Item value){
+	public void selfPut(String key, Item value){
 		editor.putString(key, value.getOriginalValue());
 		editor.commit();
 	}

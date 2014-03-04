@@ -20,5 +20,12 @@ public abstract class KeyValueCache implements IKeyValueCache {
 		return false;
 	}
 	
+	public final void put(String key, Item value) {
+		selfPut(key, value);
+		if(delegate != null)
+			delegate.put(key, value);
+	}
+	
+	protected abstract void selfPut(String key, Item value);
 	protected abstract boolean isSelfExist(String key);
 }
